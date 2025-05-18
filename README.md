@@ -80,5 +80,23 @@ Below are the key entities and their primary fields, along with relationships be
 
 *A payment is tied to a booking and tracks transaction details.*
 
+## Feature Breakdown
+- **User Management:** Registration, authentication, and profile management. Provides users with secure access and personalized settings.
+- **Property Management:** CRUD operations for listings, including media uploads and availability settings. Enables hosts to control their property details.
+- **Booking System:** Handles reservation creation, availability checks, and booking confirmations. Ensures seamless booking workflows for guests.
+- **Reviews & Ratings:** Allows users to review properties and rate their stay. Builds trust and informs future guests.
+- **Payment Processing:** Integrates payment gateways for secure transactions, tracking payment status and history.
+- **Search & Filtering:** Advanced search functionality with filters by location, date, and price. Improves user experience in finding suitable properties.
+
+## API Security
+- **Authentication (JWT):** Ensures only registered users can access protected endpoints, securing user sessions.
+- **Authorization:** Role-based permissions to control access to resources (e.g., hosts vs. guests).
+- **Input Validation:** Uses serializers and schema validation to prevent malicious data injection.
+- **Rate Limiting:** Throttles requests per user/IP to mitigate abuse and DDoS attacks.
+- **HTTPS Enforcement:** Encrypts data in transit to protect sensitive user information.
+
+## CI/CD Pipeline
+CI/CD (Continuous Integration/Continuous Deployment) automates building, testing, and deploying code changes, ensuring faster delivery and higher quality. By integrating tools like **GitHub Actions** and **Docker**, every commit is verified through automated tests and deployed in consistent environments.
+
 ---
-*Initialized on May 18, 2025.*  
+*Last updated on May 18, 2025.*  
