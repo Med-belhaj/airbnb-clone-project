@@ -20,14 +20,17 @@ The **Airbnb Clone Project** is a comprehensive, real-world application designed
 - **Security Engineer:** Implements authentication and authorization mechanisms, audits code for vulnerabilities, and enforces best security practices.
 - **QA Engineer:** Writes and executes test cases, performs automated and manual testing, and ensures application quality.
 
-## Technology Stack
-- **Backend Framework:** Django (Python)
-- **API Layers:** Django REST Framework & Graphene-Django (GraphQL)
-- **Database:** MySQL
-- **Containerization:** Docker & Docker Compose
-- **CI/CD:** GitHub Actions (or alternative)
-- **Authentication:** JSON Web Tokens (JWT)
-- **Version Control:** Git & GitHub
+## Technology Stack Overview
+| Technology               | Purpose in Project                                                      |
+|--------------------------|-------------------------------------------------------------------------|
+| **Django**              | A Python web framework used to build the application’s backend APIs.    |
+| **Django REST Framework** | Extension of Django for building robust RESTful APIs with serializers and viewsets. |
+| **Graphene-Django**     | Integrates GraphQL support into Django for flexible query and mutation capabilities. |
+| **MySQL**               | Relational database for storing application data like users, listings, and bookings. |
+| **Docker & Docker Compose** | Containerization tools to package and orchestrate application services consistently. |
+| **Git & GitHub**        | Version control and repository hosting for collaborative development and code reviews. |
+| **GitHub Actions**      | CI/CD platform for automating testing, linting, and deployment workflows. |
+| **JSON Web Tokens (JWT)** | Authentication mechanism for securing API endpoints and managing user sessions. |
 
 ---
 *Initialized on May 18, 2025.*  
