@@ -23,14 +23,62 @@ The **Airbnb Clone Project** is a comprehensive, real-world application designed
 ## Technology Stack Overview
 | Technology               | Purpose in Project                                                      |
 |--------------------------|-------------------------------------------------------------------------|
-| **Django**              | A Python web framework used to build the application’s backend APIs.    |
-| **Django REST Framework** | Extension of Django for building robust RESTful APIs with serializers and viewsets. |
-| **Graphene-Django**     | Integrates GraphQL support into Django for flexible query and mutation capabilities. |
-| **MySQL**               | Relational database for storing application data like users, listings, and bookings. |
+| **Django**               | A Python web framework used to build the application’s backend APIs.    |
+| **Django REST Framework**| Extension of Django for building robust RESTful APIs with serializers and viewsets. |
+| **Graphene-Django**      | Integrates GraphQL support into Django for flexible query and mutation capabilities. |
+| **MySQL**                | Relational database for storing application data like users, listings, and bookings. |
 | **Docker & Docker Compose** | Containerization tools to package and orchestrate application services consistently. |
-| **Git & GitHub**        | Version control and repository hosting for collaborative development and code reviews. |
-| **GitHub Actions**      | CI/CD platform for automating testing, linting, and deployment workflows. |
-| **JSON Web Tokens (JWT)** | Authentication mechanism for securing API endpoints and managing user sessions. |
+| **Git & GitHub**         | Version control and repository hosting for collaborative development and code reviews. |
+| **GitHub Actions**       | CI/CD platform for automating testing, linting, and deployment workflows. |
+| **JSON Web Tokens (JWT)**| Authentication mechanism for securing API endpoints and managing user sessions. |
+
+## Database Design
+Below are the key entities and their primary fields, along with relationships between them:
+
+### Users
+- **id** (PK)
+- **username**
+- **email**
+- **password**
+- **role**
+
+*A user can own multiple properties, create multiple bookings, write reviews, and make payments.*
+
+### Properties
+- **id** (PK)
+- **title**
+- **description**
+- **owner_id** (FK ? Users.id)
+- **location**
+
+*A property belongs to a user and can have many bookings and reviews.*
+
+### Bookings
+- **id** (PK)
+- **user_id** (FK ? Users.id)
+- **property_id** (FK ? Properties.id)
+- **start_date**
+- **end_date**
+
+*A booking belongs to a user and a property, and is associated with one payment record.*
+
+### Reviews
+- **id** (PK)
+- **user_id** (FK ? Users.id)
+- **property_id** (FK ? Properties.id)
+- **rating**
+- **comment**
+
+*A review is created by a user for a specific property.*
+
+### Payments
+- **id** (PK)
+- **booking_id** (FK ? Bookings.id)
+- **amount**
+- **payment_date**
+- **status**
+
+*A payment is tied to a booking and tracks transaction details.*
 
 ---
 *Initialized on May 18, 2025.*  
