@@ -11,6 +11,15 @@ The **Airbnb Clone Project** is a comprehensive, real-world application designed
 - **CI/CD Integration:** Configure automated pipelines using GitHub Actions (or equivalent) for testing, linting, and deployment.
 - **Team Collaboration:** Document roles, workflows, and code conventions to enable seamless collaboration in a team environment.
 
+## Team Roles
+- **Project Manager:** Oversees project timeline, coordinates between stakeholders, and ensures milestones are met.
+- **Backend Developer:** Implements server-side logic using Django, develops REST and GraphQL APIs, and handles business logic.
+- **Database Administrator:** Designs and maintains the MySQL database schema, ensures data integrity, manages migrations, and optimizes queries.
+- **Frontend Developer:** (When applicable) Integrates with API endpoints, implements UI components, and ensures responsive design.
+- **DevOps Engineer:** Configures Docker containers, sets up CI/CD pipelines with GitHub Actions, and manages deployment processes.
+- **Security Engineer:** Implements authentication and authorization mechanisms, audits code for vulnerabilities, and enforces best security practices.
+- **QA Engineer:** Writes and executes test cases, performs automated and manual testing, and ensures application quality.
+
 ## Technology Stack
 - **Backend Framework:** Django (Python)
 - **API Layers:** Django REST Framework & Graphene-Django (GraphQL)
